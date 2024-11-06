@@ -67,14 +67,19 @@
 
     <div class="my_form">
       <form>
-        <label for="number">Номер</label><br>
-        <input type="text" id="number"><br>
+        <label for="num">Номер</label><br>
+        <input type="number" id="num" min="8"><br>
 
         <label for="name">Название лабораторной работы</label><br>
         <input type="text" id="name"><br>
 
         <label for="status">Статус</label><br>
-        <input type="text" id="status"><br>
+        <input list="status">
+        <datalist id="status">
+          <option value="Сдано"></option>
+          <option value="В процессе"></option>
+          <option value="В планах"></option>
+        </datalist><br>
 
         <input type="submit" id="send_button">
       </form>
