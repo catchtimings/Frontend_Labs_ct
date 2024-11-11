@@ -2,7 +2,7 @@
 <hmtl lang="ru">
   <head>
     <title>LAB 6 AND 7</title>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -46,7 +46,7 @@
             <a class="nav-link" href="#andrew-carousel">Карусель</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Карточки</a>
+            <a class="nav-link" href="#andrew-cards">Карточки</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Краткая информация</a>
@@ -56,7 +56,12 @@
     </nav>
 
     <div class="container">
-      <div id="andrew-carousel" class="carousel slide" data-ride="carousel">
+      <div
+        id="andrew-carousel"
+        class="carousel slide"
+        data-ride="carousel"
+        style="width: 50%; margin: auto"
+      >
         <div class="carousel-indicators">
           <li
             data-target="#andrew-carousel"
@@ -107,6 +112,23 @@
         >
           <span class="carousel-control-next-icon"></span>
         </a>
+      </div>
+
+      <div id="andrew-cards" class="card-group">
+        <div class="card">
+          <img
+            class="card-img-bottom"
+            src="images/tasm_1.jpg"
+            alt="The amazing spider-man"
+          />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Новый человек-паук</h4>
+          <p class="card-text">Эндрю Гарфилд в роли человека-паука</p>
+          <a href="https://www.kinopoisk.ru/film/278217/" class="btn btn-info"
+            >Кинопоиск</a
+          >
+        </div>
       </div>
     </div>
   </body>
