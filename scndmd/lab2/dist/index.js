@@ -1,7 +1,7 @@
 // task 1
 //Одномерный массив
-let array1 = [1, 2, 3, 4, 5];
-let array2 = [1, 2, 3, 4, 5, 6];
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [1, 2, 3, 4, 5, 6];
 //Поиск медианного значения
 function medium_value(array) {
     if (array.length % 2 !== 0) {
@@ -18,7 +18,7 @@ const res2 = medium_value(array2);
 console.log(res1);
 console.log(res2);
 //Двумерный массив
-let matrix = [
+const matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]

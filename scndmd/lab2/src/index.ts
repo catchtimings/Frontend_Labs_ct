@@ -1,8 +1,8 @@
 // task 1
 
 //Одномерный массив
-let array1: number[] = [1, 2, 3, 4, 5];
-let array2: number[] = [1, 2, 3, 4, 5, 6];
+const array1: number[] = [1, 2, 3, 4, 5];
+const array2: number[] = [1, 2, 3, 4, 5, 6];
 
 //Поиск медианного значения
 function medium_value(array: number[]): number {
@@ -23,7 +23,7 @@ console.log(res1);
 console.log(res2);
 
 //Двумерный массив
-let matrix = [
+const matrix: number[][] = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
