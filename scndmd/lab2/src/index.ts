@@ -1,6 +1,7 @@
 // task 1
 
 //Одномерный массив
+console.log("Task1: ");
 const array1: number[] = [1, 2, 3, 4, 5];
 const array2: number[] = [1, 2, 3, 4, 5, 6];
 
@@ -19,6 +20,7 @@ const medium_value = (array: number[]): number =>{
 const res1: number = medium_value(array1);
 const res2: number = medium_value(array2);
 
+console.log("task with array[]: ");
 console.log(res1);
 console.log(res2);
 
@@ -42,6 +44,7 @@ const count_not_zero =(matrix: number[][], value1: number, value2: number): numb
     return count;
 }
 
+console.log("task with array[][]: ");
 const count: number = count_not_zero(matrix, 3, 6);
 console.log(count);
 
@@ -57,6 +60,7 @@ const multiply_number = (tuple: [number, string, number]): number => {
 }
 
 const mult: number = multiply_number(tuple);
+console.log("Tuple: ");
 console.log(mult);
 
 
@@ -73,6 +77,7 @@ enum Vitamins {
     E = 'Vitamin E',
 }
 
+console.log("task with enums: ");
 console.log(Vitamins.A);
 
 //task 4
@@ -113,6 +118,7 @@ const info = (animal: Pet): void => {
 const dog: Dog = new Dog();
 const cat: Cat = new Cat();
 
+console.log("task with objects: ");
 info(dog);
 info(cat);
 
@@ -129,5 +135,6 @@ const med1: Medicine = {
     vitamins: [Vitamins.B3, Vitamins.B6, Vitamins.B12],
 }
 
+console.log("task with my interface: ");
 const jsonObject = JSON.stringify(med1);
 console.log(jsonObject);

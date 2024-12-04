@@ -1,5 +1,6 @@
 // task 1
 //Одномерный массив
+console.log("Task1: ");
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [1, 2, 3, 4, 5, 6];
 //Поиск медианного значения
@@ -15,6 +16,7 @@ const medium_value = (array) => {
 };
 const res1 = medium_value(array1);
 const res2 = medium_value(array2);
+console.log("task with array[]: ");
 console.log(res1);
 console.log(res2);
 //Двумерный массив
@@ -35,6 +37,7 @@ const count_not_zero = (matrix, value1, value2) => {
     }
     return count;
 };
+console.log("task with array[][]: ");
 const count = count_not_zero(matrix, 3, 6);
 console.log(count);
 //task2
@@ -45,6 +48,7 @@ const multiply_number = (tuple) => {
     return tuple[0] * tuple[2];
 };
 const mult = multiply_number(tuple);
+console.log("Tuple: ");
 console.log(mult);
 //task3 
 // Создайте тип перечисление для типов витаминов (A, B3, B6, B12, E и т.д.). Выведите какой-либо тип витамина в консоль.
@@ -56,6 +60,7 @@ var Vitamins;
     Vitamins["B12"] = "Vitamin B12";
     Vitamins["E"] = "Vitamin E";
 })(Vitamins || (Vitamins = {}));
+console.log("task with enums: ");
 console.log(Vitamins.A);
 //task 4
 class Pet {
@@ -97,11 +102,13 @@ const info = (animal) => {
 };
 const dog = new Dog();
 const cat = new Cat();
+console.log("task with objects: ");
 info(dog);
 info(cat);
 const med1 = {
     name: 'B-Complex',
     vitamins: [Vitamins.B3, Vitamins.B6, Vitamins.B12],
 };
+console.log("task with my interface: ");
 const jsonObject = JSON.stringify(med1);
 console.log(jsonObject);
