@@ -38,3 +38,64 @@ const count_not_zero = (matrix, value1, value2) => {
 const count = count_not_zero(matrix, 3, 6);
 console.log(count);
 //task2
+//Создайте кортеж, который может содержать только 2 числовых и 1 строковое значения (порядок следования: число, строка, число)
+const tuple = [10, 'word', 10];
+// Реализуйте метод, возвращающий произведение числовых значений
+const multiply_number = (tuple) => {
+    return tuple[0] * tuple[2];
+};
+const mult = multiply_number(tuple);
+console.log(mult);
+//task3 
+// Создайте тип перечисление для типов витаминов (A, B3, B6, B12, E и т.д.). Выведите какой-либо тип витамина в консоль.
+var Vitamins;
+(function (Vitamins) {
+    Vitamins["A"] = "Vitamin A";
+    Vitamins["B3"] = "Vitamin B3";
+    Vitamins["B6"] = "Vitamin B6";
+    Vitamins["B12"] = "Vitamin B12";
+    Vitamins["E"] = "Vitamin E";
+})(Vitamins || (Vitamins = {}));
+console.log(Vitamins.A);
+//task 4
+class Pet {
+    constructor() {
+        this.name = 'Some pet';
+        this.age = -1;
+    }
+    speak() {
+        return "No speak. I am fish!";
+    }
+}
+class Dog extends Pet {
+    constructor() {
+        super(...arguments);
+        this.label = "AngryHunter";
+        this.age = 8;
+    }
+    speak() {
+        return "Yaw-Gaw!";
+    }
+}
+class Cat extends Pet {
+    constructor() {
+        super(...arguments);
+        this.name = 'Barsik';
+        this.age = 2;
+    }
+    speak() {
+        return "Miyau!";
+    }
+}
+const info = (animal) => {
+    console.log(animal.name);
+    if ("label" in animal) {
+        console.log(animal.label);
+    }
+    console.log(animal.age);
+    console.log(animal.speak());
+};
+const dog = new Dog;
+const cat = new Cat;
+info(dog);
+info(cat);

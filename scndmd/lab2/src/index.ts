@@ -48,5 +48,75 @@ console.log(count);
 
 //task2
 
+//Создайте кортеж, который может содержать только 2 числовых и 1 строковое значения (порядок следования: число, строка, число)
+const tuple: [number, string, number] = [10, 'word', 10];
+
+// Реализуйте метод, возвращающий произведение числовых значений
+const multiply_number = (tuple: [number, string, number]): number => {
+    return tuple[0] * tuple[2];
+}
+
+const mult: number = multiply_number(tuple);
+console.log(mult);
+
+
+//task3 
+
+// Создайте тип перечисление для типов витаминов (A, B3, B6, B12, E и т.д.). Выведите какой-либо тип витамина в консоль.
+
+
+enum Vitamins {
+    A = 'Vitamin A',
+    B3 = 'Vitamin B3',
+    B6 = 'Vitamin B6',
+    B12 = 'Vitamin B12',
+    E = 'Vitamin E',
+}
+
+console.log(Vitamins.A);
+
+//task 4
+
+class Pet {
+    name: string = 'Some pet'
+    age: number = -1
+    speak() {
+        return "No speak. I am fish!";
+    }
+}
+
+class Dog extends Pet {
+    label = "AngryHunter";
+    age = 8;
+    speak() {
+        return "Yaw-Gaw!";
+    }
+}
+
+class Cat extends Pet {
+    name = 'Barsik';
+    age = 2;
+    speak() {
+        return "Miyau!";
+    }
+}
+
+const info = (animal: Pet): void => {
+    console.log(animal.name);
+    if("label" in animal){
+        console.log(animal.label);
+    }
+    console.log(animal.age)
+    console.log(animal.speak());
+}
+
+const dog: Dog = new Dog();
+const cat: Cat = new Cat();
+
+info(dog);
+info(cat);
+
+//task 5
+
 
 
