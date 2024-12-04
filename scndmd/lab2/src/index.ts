@@ -42,7 +42,7 @@ function count_not_zero(matrix: number[][], value1: number, value2: number): num
     return count;
 }
 
-const count: number = count_not_zero(matrix, 1, 6);
+const count: number = count_not_zero(matrix, 3, 6);
 console.log(count);
 
 

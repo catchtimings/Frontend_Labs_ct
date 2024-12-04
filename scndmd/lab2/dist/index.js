@@ -35,5 +35,5 @@ function count_not_zero(matrix, value1, value2) {
     }
     return count;
 }
-const count = count_not_zero(matrix, 1, 6);
+const count = count_not_zero(matrix, 3, 6);
 console.log(count);
