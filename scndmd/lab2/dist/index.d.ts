@@ -31,7 +31,7 @@ declare class Cat extends Pet {
     age: number;
     speak(): string;
 }
-declare const info: (animal: Pet) => void;
+declare function info<T extends Pet>(animal: T): void;
 declare const dog: Dog;
 declare const cat: Cat;
 interface Medicine {

@@ -92,14 +92,14 @@ class Cat extends Pet {
         return "Miyau!";
     }
 }
-const info = (animal) => {
+function info(animal) {
     console.log(animal.name);
     if ("label" in animal) {
         console.log(animal.label);
     }
     console.log(animal.age);
     console.log(animal.speak());
-};
+}
 const dog = new Dog();
 const cat = new Cat();
 console.log("task with objects: ");

@@ -106,18 +106,17 @@ class Cat extends Pet {
     }
 }
 
-const info = (animal: Pet): void => {
+function info<T extends Pet>(animal: T): void {
     console.log(animal.name);
     if("label" in animal){
         console.log(animal.label);
     }
     console.log(animal.age)
     console.log(animal.speak());
-}
+} 
 
 const dog: Dog = new Dog();
 const cat: Cat = new Cat();
-
 console.log("task with objects: ");
 info(dog);
 info(cat);
