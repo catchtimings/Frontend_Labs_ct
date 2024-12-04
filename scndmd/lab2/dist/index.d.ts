@@ -34,3 +34,9 @@ declare class Cat extends Pet {
 declare const info: (animal: Pet) => void;
 declare const dog: Dog;
 declare const cat: Cat;
+interface Medicine {
+    name: string;
+    vitamins: Vitamins[];
+}
+declare const med1: Medicine;
+declare const jsonObject: string;

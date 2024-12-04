@@ -95,7 +95,13 @@ const info = (animal) => {
     console.log(animal.age);
     console.log(animal.speak());
 };
-const dog = new Dog;
-const cat = new Cat;
+const dog = new Dog();
+const cat = new Cat();
 info(dog);
 info(cat);
+const med1 = {
+    name: 'B-Complex',
+    vitamins: [Vitamins.B3, Vitamins.B6, Vitamins.B12],
+};
+const jsonObject = JSON.stringify(med1);
+console.log(jsonObject);

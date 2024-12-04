@@ -118,5 +118,16 @@ info(cat);
 
 //task 5
 
+interface Medicine {
+    name: string,
+    vitamins: Vitamins[],
+}
 
 
+const med1: Medicine = {
+    name: 'B-Complex',
+    vitamins: [Vitamins.B3, Vitamins.B6, Vitamins.B12],
+}
+
+const jsonObject = JSON.stringify(med1);
+console.log(jsonObject);
