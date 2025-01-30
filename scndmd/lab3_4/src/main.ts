@@ -31,5 +31,8 @@ bike.print_info();
 
 let storage: VehicleStorage<Car> = new VehicleStorage([car1, car2]);
 console.log("Vehicle storage: ");
-console.log(storage.get_data());
+let data: Car[] = storage.get_data();
+for(let i = 0; i < data.length; i++){
+    console.log(data[i].print_info());
+}
 
