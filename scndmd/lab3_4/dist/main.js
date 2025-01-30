@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const vehicle_js_1 = require("./vehicle.js");
+const transport_js_1 = require("./transport.js");
 const enums_js_1 = require("./enums.js");
 const owner_js_1 = require("./owner.js");
-var Car = vehicle_js_1.Transport.Car;
-var Motorbike = vehicle_js_1.Transport.Motorbike;
-var VehicleStorage = vehicle_js_1.Transport.VehicleStorage;
+var Car = transport_js_1.Transport.Car;
+var Motorbike = transport_js_1.Transport.Motorbike;
+var VehicleStorage = transport_js_1.Transport.VehicleStorage;
 const owner1 = new owner_js_1.Owner("Petrov", "Petr", "Petrovich", new Date, enums_js_1.IDType.DRIVER_LICENSE, 8948, 470864);
 const car1 = new Car("BMW", "M5", 2020, 123456789, "A000AA763RU", owner1, enums_js_1.Body_Type.SEDAN, enums_js_1.Car_Class.E);
 console.log("First owner: ");
