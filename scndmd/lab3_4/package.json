@@ -1,5 +1,5 @@
 {
-  "name": "lab3",
+  "name": "lab3_4",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/node": "^22.10.1"
+    "@types/node": "^22.12.0"
   }
 }
