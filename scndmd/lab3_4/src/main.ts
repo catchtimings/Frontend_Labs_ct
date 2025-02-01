@@ -2,37 +2,20 @@ import { Transport } from "./transport.js";
 import { IDType, Body_Type, Car_Class } from "./enums.js";
 import { Owner } from "./owner.js";
 
-import Car = Transport.Car;
-import Motorbike = Transport.Motorbike;
-import VehicleStorage = Transport.VehicleStorage;
-
-const owner1: Owner = new Owner("Petrov", "Petr", "Petrovich", new Date, IDType.DRIVER_LICENSE, 8948, 470864);
-const car1: Car = new Car("BMW", "M5", 2020, 123456789, "A000AA763RU", owner1, Body_Type.SEDAN, Car_Class.E);
-console.log("First owner: ");
-owner1.print_info();
-console.log("His vehicle: ");
-car1.print_info();
-
-const owner2: Owner = new Owner("Ivan", "Ivanov", "Ivanovich", new Date, IDType.DRIVER_LICENSE, 9461, 604240);
-const car2: Car = new Car("Porsche", "911", 2023, 83785387695, "A111AA763RU", owner2, Body_Type.COUPE, Car_Class.S);
-console.log("First owner: ");
-owner2.print_info();
-console.log("His vehicle: ");
-car2.print_info();
+let owner1: Owner = new Owner("Petrov", "Petr", "Petrovich", new Date, IDType.DRIVER_LICENSE, 8948, 470864);
+let car1: Transport.Car = new Transport.Car("bmw", "m5", 2020, "1sdg2345yu6789a", "a000aa763ru", owner1, Body_Type.SEDAN, Car_Class.E);
 
 
-const owner3: Owner = new Owner("Alexandrov", "Alexandr", "Alexandrovich", new Date, IDType.PASSPORT, 3319, 291934);
-const bike: Motorbike = new Motorbike("BMW", "R 1250 RT", 2021, 65457838458, "0000AA763RU", owner2, "idk", false);
-console.log("Third owner: ");
-owner3.print_info();
-console.log("His vehicle: ");
-bike.print_info();
+let owner2: Owner = new Owner("Ivan", "Ivanov", "Ivanovich", new Date, IDType.DRIVER_LICENSE, 9461, 604240);
+let car2: Transport.Car = new Transport.Car("porsche", "911", 2023, "8sl3785sg387oi695", "a111aa763ru", owner2, Body_Type.COUPE, Car_Class.S);
 
 
-let storage: VehicleStorage<Car> = new VehicleStorage([car1, car2]);
+let owner3: Owner = new Owner("Alexandrov", "Alexandr", "Alexandrovich", new Date, IDType.PASSPORT, 3319, 291934);
+let bike1: Transport.Motorbike = new Transport.Motorbike("bmw", "r 1250 rt", 2021, "7gg66fs5366afds3", "0000aa763ru", owner2, "idk", false);
+
+
+let storage: Transport.VehicleStorage<Transport.Car> = new Transport.VehicleStorage([car1, car2]);
 console.log("Vehicle storage: ");
-let data: Car[] = storage.get_data();
-for(let i = 0; i < data.length; i++){
-    console.log(data[i].print_info());
-}
+let data: Transport.Car[] = storage.get_data();
+console.log(data);
 

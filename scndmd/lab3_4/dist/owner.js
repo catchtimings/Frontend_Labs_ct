@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Owner = void 0;
-class Owner {
-    constructor(surname, name, patronymic, birthdate, id_type, ser, num) {
+var Owner = /** @class */ (function () {
+    function Owner(surname, name, patronymic, birthdate, id_type, ser, num) {
         this._surname = surname;
         this._name = name;
         this._patronymic = patronymic;
@@ -11,58 +8,79 @@ class Owner {
         this._ser = ser;
         this._num = num;
     }
-    get surname() {
-        return this._surname;
-    }
-    get name() {
-        return this._name;
-    }
-    get patronymic() {
-        return this._patronymic;
-    }
-    get birthdate() {
-        return this._birthdate;
-    }
-    get id_type() {
-        return this._id_type;
-    }
-    get ser() {
-        return this._ser;
-    }
-    get num() {
-        return this._num;
-    }
-    set surname(surname) {
-        this._surname = surname;
-    }
-    set name(name) {
-        this._name = name;
-    }
-    set patronymic(patronymic) {
-        this._patronymic = patronymic;
-    }
-    set birthdate(birthdate) {
-        this._birthdate = birthdate;
-    }
-    set id_type(id_type) {
-        this._id_type = id_type;
-    }
-    set ser(ser) {
-        this._ser = ser;
-    }
-    set num(num) {
-        this._num = num;
-    }
-    print_info() {
-        console.log(`
-            Surname: ${this._surname}
-            Name: ${this._name}
-            Patronymic: ${this._patronymic}
-            BirthDate: ${this._birthdate}
-            ID Type: ${this._id_type}
-            ID series: ${this._ser}
-            ID number: ${this._num}
-            `);
-    }
-}
-exports.Owner = Owner;
+    Object.defineProperty(Owner.prototype, "surname", {
+        get: function () {
+            return this._surname;
+        },
+        set: function (surname) {
+            this._surname = surname;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Owner.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (name) {
+            this._name = name;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Owner.prototype, "patronymic", {
+        get: function () {
+            return this._patronymic;
+        },
+        set: function (patronymic) {
+            this._patronymic = patronymic;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Owner.prototype, "birthdate", {
+        get: function () {
+            return this._birthdate;
+        },
+        set: function (birthdate) {
+            this._birthdate = birthdate;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Owner.prototype, "id_type", {
+        get: function () {
+            return this._id_type;
+        },
+        set: function (id_type) {
+            this._id_type = id_type;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Owner.prototype, "ser", {
+        get: function () {
+            return this._ser;
+        },
+        set: function (ser) {
+            this._ser = ser;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Owner.prototype, "num", {
+        get: function () {
+            return this._num;
+        },
+        set: function (num) {
+            this._num = num;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Owner.prototype.print_info = function () {
+        console.log("\n            Surname: ".concat(this._surname, "\n            Name: ").concat(this._name, "\n            Patronymic: ").concat(this._patronymic, "\n            BirthDate: ").concat(this._birthdate, "\n            ID Type: ").concat(this._id_type, "\n            ID series: ").concat(this._ser, "\n            ID number: ").concat(this._num, "\n            "));
+    };
+    return Owner;
+}());
+export { Owner };

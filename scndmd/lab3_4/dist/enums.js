@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Car_Class = exports.Body_Type = exports.IDType = void 0;
-var IDType;
+export var IDType;
 (function (IDType) {
     IDType["PASSPORT"] = "Passport";
     IDType["DRIVER_LICENSE"] = "Driver Lisence";
-})(IDType || (exports.IDType = IDType = {}));
-var Body_Type;
+})(IDType || (IDType = {}));
+export var Body_Type;
 (function (Body_Type) {
     Body_Type["SEDAN"] = "Sedan";
     Body_Type["COUPE"] = "Coupe";
@@ -21,8 +18,8 @@ var Body_Type;
     Body_Type["MINIVAN"] = "Minivan";
     Body_Type["COMPACT"] = "Compact";
     Body_Type["CABRIOLET"] = "Cabriolet";
-})(Body_Type || (exports.Body_Type = Body_Type = {}));
-var Car_Class;
+})(Body_Type || (Body_Type = {}));
+export var Car_Class;
 (function (Car_Class) {
     Car_Class["A"] = "A";
     Car_Class["B"] = "B";
@@ -33,4 +30,4 @@ var Car_Class;
     Car_Class["S"] = "S";
     Car_Class["M"] = "M";
     Car_Class["J"] = "J";
-})(Car_Class || (exports.Car_Class = Car_Class = {}));
+})(Car_Class || (Car_Class = {}));

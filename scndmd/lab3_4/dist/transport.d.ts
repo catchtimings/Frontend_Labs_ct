@@ -5,7 +5,7 @@ export declare namespace Transport {
         brand: string;
         model: string;
         year: number;
-        VIN: number;
+        VIN: string;
         reg_number: string;
         owner_info: IOwner;
         print_info(): void;
@@ -17,17 +17,17 @@ export declare namespace Transport {
         private _VIN;
         private _reg_number;
         private _owner_info;
-        constructor(brand: string, model: string, year: number, VIN: number, reg_number: string, owner_info: IOwner);
+        constructor(brand: string, model: string, year: number, VIN: string, reg_number: string, owner_info: IOwner);
         get brand(): string;
         get model(): string;
         get year(): number;
-        get VIN(): number;
+        get VIN(): string;
         get reg_number(): string;
         get owner_info(): IOwner;
         set brand(brand: string);
         set model(model: string);
         set year(year: number);
-        set VIN(VIN: number);
+        set VIN(VIN: string);
         set reg_number(reg_number: string);
         set owner_info(owner_info: IOwner);
         print_info(): void;
@@ -39,7 +39,7 @@ export declare namespace Transport {
     class Car extends Vehicle implements ICar {
         private _body_type;
         private _car_class;
-        constructor(brand: string, model: string, year: number, VIN: number, reg_number: string, owner_info: IOwner, body_type: Body_Type, car_class: Car_Class);
+        constructor(brand: string, model: string, year: number, VIN: string, reg_number: string, owner_info: IOwner, body_type: Body_Type, car_class: Car_Class);
         get body_type(): Body_Type;
         get car_class(): Car_Class;
         set body_type(body_type: Body_Type);
@@ -53,7 +53,7 @@ export declare namespace Transport {
     class Motorbike extends Vehicle implements IMotorbike {
         private _frame_type;
         private _sports;
-        constructor(brand: string, model: string, year: number, VIN: number, reg_number: string, owner_info: IOwner, frame_type: string, sports: boolean);
+        constructor(brand: string, model: string, year: number, VIN: string, reg_number: string, owner_info: IOwner, frame_type: string, sports: boolean);
         get frame_type(): string;
         get sports(): boolean;
         set frame_type(frame_type: string);

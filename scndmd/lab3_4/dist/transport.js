@@ -1,10 +1,29 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Transport = void 0;
-var Transport;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { sealed, up } from "./decorator.js";
+export var Transport;
 (function (Transport) {
-    class Vehicle {
-        constructor(brand, model, year, VIN, reg_number, owner_info) {
+    var Vehicle = /** @class */ (function () {
+        function Vehicle(brand, model, year, VIN, reg_number, owner_info) {
             this._brand = brand;
             this._model = model;
             this._year = year;
@@ -12,121 +31,183 @@ var Transport;
             this._reg_number = reg_number;
             this._owner_info = owner_info;
         }
-        get brand() {
-            return this._brand;
-        }
-        get model() {
-            return this._model;
-        }
-        get year() {
-            return this._year;
-        }
-        get VIN() {
-            return this._VIN;
-        }
-        get reg_number() {
-            return this._reg_number;
-        }
-        get owner_info() {
-            return this._owner_info;
-        }
-        set brand(brand) {
-            this._brand = brand;
-        }
-        set model(model) {
-            this._model = model;
-        }
-        set year(year) {
-            this._year = year;
-        }
-        set VIN(VIN) {
-            this._VIN = VIN;
-        }
-        set reg_number(reg_number) {
-            this._reg_number = reg_number;
-        }
-        set owner_info(owner_info) {
-            this._owner_info = owner_info;
-        }
-        print_info() {
-            console.log(`
-                Brand: ${this._brand}
-                Model: ${this._model}
-                Year of release: ${this._year}
-                VIN: ${this._VIN}
-                Registration number: ${this._reg_number}
-                `);
-        }
-    }
+        Object.defineProperty(Vehicle.prototype, "brand", {
+            get: function () {
+                return this._brand;
+            },
+            set: function (brand) {
+                this._brand = brand;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Vehicle.prototype, "model", {
+            get: function () {
+                return this._model;
+            },
+            set: function (model) {
+                this._model = model;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Vehicle.prototype, "year", {
+            get: function () {
+                return this._year;
+            },
+            set: function (year) {
+                this._year = year;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Vehicle.prototype, "VIN", {
+            get: function () {
+                return this._VIN;
+            },
+            set: function (VIN) {
+                this._VIN = VIN;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Vehicle.prototype, "reg_number", {
+            get: function () {
+                return this._reg_number;
+            },
+            set: function (reg_number) {
+                this._reg_number = reg_number;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Vehicle.prototype, "owner_info", {
+            get: function () {
+                return this._owner_info;
+            },
+            set: function (owner_info) {
+                this._owner_info = owner_info;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Vehicle.prototype.print_info = function () {
+            console.log("\n                Brand: ".concat(this._brand, "\n                Model: ").concat(this._model, "\n                Year of release: ").concat(this._year, "\n                VIN: ").concat(this._VIN, "\n                Registration number: ").concat(this._reg_number, "\n                "));
+        };
+        __decorate([
+            up
+        ], Vehicle.prototype, "brand", null);
+        __decorate([
+            up
+        ], Vehicle.prototype, "model", null);
+        __decorate([
+            up
+        ], Vehicle.prototype, "VIN", null);
+        __decorate([
+            up
+        ], Vehicle.prototype, "reg_number", null);
+        __decorate([
+            up
+        ], Vehicle.prototype, "print_info", null);
+        Vehicle = __decorate([
+            sealed
+        ], Vehicle);
+        return Vehicle;
+    }());
     Transport.Vehicle = Vehicle;
-    class Car extends Vehicle {
-        constructor(brand, model, year, VIN, reg_number, owner_info, body_type, car_class) {
-            super(brand, model, year, VIN, reg_number, owner_info);
-            this._body_type = body_type;
-            this._car_class = car_class;
+    var Car = /** @class */ (function (_super) {
+        __extends(Car, _super);
+        function Car(brand, model, year, VIN, reg_number, owner_info, body_type, car_class) {
+            var _this = _super.call(this, brand, model, year, VIN, reg_number, owner_info) || this;
+            _this._body_type = body_type;
+            _this._car_class = car_class;
+            return _this;
         }
-        get body_type() {
-            return this._body_type;
-        }
-        get car_class() {
-            return this._car_class;
-        }
-        set body_type(body_type) {
-            this._body_type = body_type;
-        }
-        set car_class(car_class) {
-            this._car_class = car_class;
-        }
-        print_info() {
-            super.print_info();
-            console.log(`
-                Body type: ${this._body_type};
-                Car class: ${this._car_class};
-                `);
-        }
-    }
+        Object.defineProperty(Car.prototype, "body_type", {
+            get: function () {
+                return this._body_type;
+            },
+            set: function (body_type) {
+                this._body_type = body_type;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Car.prototype, "car_class", {
+            get: function () {
+                return this._car_class;
+            },
+            set: function (car_class) {
+                this._car_class = car_class;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Car.prototype.print_info = function () {
+            _super.prototype.print_info.call(this);
+            console.log("\n                Body type: ".concat(this._body_type, ";\n                Car class: ").concat(this._car_class, ";\n                "));
+        };
+        return Car;
+    }(Vehicle));
     Transport.Car = Car;
-    class Motorbike extends Vehicle {
-        constructor(brand, model, year, VIN, reg_number, owner_info, frame_type, sports) {
-            super(brand, model, year, VIN, reg_number, owner_info);
-            this._frame_type = frame_type;
-            this._sports = sports;
+    var Motorbike = /** @class */ (function (_super) {
+        __extends(Motorbike, _super);
+        function Motorbike(brand, model, year, VIN, reg_number, owner_info, frame_type, sports) {
+            var _this = _super.call(this, brand, model, year, VIN, reg_number, owner_info) || this;
+            _this._frame_type = frame_type;
+            _this._sports = sports;
+            return _this;
         }
-        get frame_type() {
-            return this._frame_type;
-        }
-        get sports() {
-            return this._sports;
-        }
-        set frame_type(frame_type) {
-            this._frame_type = frame_type;
-        }
-        set sports(sports) {
-            this._sports = sports;
-        }
-        print_info() {
-            super.print_info();
-            console.log(`
-                Frame type: ${this._frame_type}
-                For sport: ${this._sports}
-                `);
-        }
-    }
+        Object.defineProperty(Motorbike.prototype, "frame_type", {
+            get: function () {
+                return this._frame_type;
+            },
+            set: function (frame_type) {
+                this._frame_type = frame_type;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Motorbike.prototype, "sports", {
+            get: function () {
+                return this._sports;
+            },
+            set: function (sports) {
+                this._sports = sports;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Motorbike.prototype.print_info = function () {
+            _super.prototype.print_info.call(this);
+            console.log("\n                Frame type: ".concat(this._frame_type, "\n                For sport: ").concat(this._sports, "\n                "));
+        };
+        return Motorbike;
+    }(Vehicle));
     Transport.Motorbike = Motorbike;
-    class VehicleStorage {
-        constructor(data) {
+    var VehicleStorage = /** @class */ (function () {
+        function VehicleStorage(data) {
             this._creation_date = new Date();
             this._data = data;
         }
-        get creation_date() {
-            return this._creation_date;
-        }
-        get data() {
+        Object.defineProperty(VehicleStorage.prototype, "creation_date", {
+            get: function () {
+                return this._creation_date;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(VehicleStorage.prototype, "data", {
+            get: function () {
+                return this._data;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        VehicleStorage.prototype.get_data = function () {
             return this._data;
-        }
-        get_data() {
-            return this._data;
-        }
-    }
+        };
+        return VehicleStorage;
+    }());
     Transport.VehicleStorage = VehicleStorage;
-})(Transport || (exports.Transport = Transport = {}));
+})(Transport || (Transport = {}));

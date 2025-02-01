@@ -1,5 +1,6 @@
 import { IOwner } from "./owner.js";
 import { Body_Type, Car_Class } from "./enums.js";
+import { sealed, up } from "./decorator.js";
 
 export namespace Transport {
     
@@ -7,21 +8,22 @@ export namespace Transport {
         brand: string;
         model: string;
         year: number;
-        VIN: number;
+        VIN: string;
         reg_number: string;
         owner_info: IOwner;
         print_info() : void;
     }
     
+    @sealed
     export class Vehicle implements IVehicle {
         private _brand: string;
         private _model: string;
         private _year: number;
-        private _VIN: number;
+        private _VIN: string;
         private _reg_number: string;
         private _owner_info: IOwner;
     
-        constructor(brand: string, model: string, year: number, VIN: number, reg_number: string, owner_info: IOwner){
+        constructor(brand: string, model: string, year: number, VIN: string, reg_number: string, owner_info: IOwner){
             this._brand = brand;
             this._model = model;
             this._year = year;
@@ -30,22 +32,26 @@ export namespace Transport {
             this._owner_info = owner_info;
         }
     
+        @up
         get brand() {
             return this._brand;
         }
     
+        @up
         get model() {
             return this._model;
         }
-    
+        
         get year() {
             return this._year;
         }
     
+        @up
         get VIN() {
             return this._VIN;
         }
     
+        @up
         get reg_number() {
             return this._reg_number;
         }
@@ -66,7 +72,7 @@ export namespace Transport {
             this._year = year;
         }
     
-        set VIN(VIN: number) {
+        set VIN(VIN: string) {
             this._VIN = VIN;
         }
     
@@ -78,7 +84,7 @@ export namespace Transport {
             this._owner_info = owner_info;
         }
     
-    
+        @up
         print_info(): void {
             console.log(
                 `
@@ -101,17 +107,19 @@ export namespace Transport {
         private _body_type: Body_Type;
         private _car_class: Car_Class;
     
-        constructor(brand: string, model: string, year: number, VIN: number, reg_number: string, owner_info: IOwner, body_type: Body_Type, car_class: Car_Class){
+        constructor(brand: string, model: string, year: number, VIN: string, reg_number: string, owner_info: IOwner, body_type: Body_Type, car_class: Car_Class){
             super(brand, model, year, VIN, reg_number, owner_info);
     
             this._body_type = body_type;
             this._car_class = car_class;
         }
-    
+        
+        
         get body_type() {
             return this._body_type;
         }
     
+        
         get car_class() {
             return this._car_class;
         }
@@ -123,7 +131,8 @@ export namespace Transport {
         set car_class(car_class: Car_Class) {
             this._car_class = car_class;
         }
-    
+        
+        
         print_info(): void {
             super.print_info();
             console.log(
@@ -144,7 +153,7 @@ export namespace Transport {
         private _frame_type: string;
         private _sports: boolean;
     
-        constructor(brand: string, model: string, year: number, VIN: number, reg_number: string, owner_info: IOwner, frame_type: string, sports: boolean){
+        constructor(brand: string, model: string, year: number, VIN: string, reg_number: string, owner_info: IOwner, frame_type: string, sports: boolean){
             super(brand, model, year, VIN, reg_number, owner_info);
     
             this._frame_type = frame_type;
