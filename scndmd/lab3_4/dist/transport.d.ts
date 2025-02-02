@@ -9,6 +9,7 @@ export declare namespace Transport {
         reg_number: string;
         owner_info: IOwner;
         print_info(): void;
+        car_registration(): string;
     }
     class Vehicle implements IVehicle {
         private _brand;
@@ -31,6 +32,7 @@ export declare namespace Transport {
         set reg_number(reg_number: string);
         set owner_info(owner_info: IOwner);
         print_info(): void;
+        car_registration(): string;
     }
     interface ICar extends IVehicle {
         body_type: Body_Type;
@@ -64,6 +66,8 @@ export declare namespace Transport {
         creation_date: Date;
         data: T[];
         get_data(): T[];
+        sort_by_brand(): void;
+        all_ends_with(pattern: string): T[];
     }
     class VehicleStorage<T extends Vehicle> implements IVehicleStorage<T> {
         private _creation_date;
@@ -72,5 +76,7 @@ export declare namespace Transport {
         get creation_date(): Date;
         get data(): T[];
         get_data(): T[];
+        sort_by_brand(): void;
+        all_ends_with(pattern: string): T[];
     }
 }

@@ -12,6 +12,7 @@ export namespace Transport {
         reg_number: string;
         owner_info: IOwner;
         print_info() : void;
+        car_registration() : string;
     }
     
     @sealed
@@ -96,6 +97,15 @@ export namespace Transport {
                 `
             );
         }
+
+        @up
+        car_registration() : string {
+            const FIO: string = this._owner_info.surname + ' ' + this._owner_info.name + ' ' + this._owner_info.patronymic;
+            const info: [string, string, string] = [this._VIN, FIO, this._reg_number];
+
+            return JSON.stringify(info);
+
+        }
     }
     
      export interface ICar extends IVehicle {
@@ -114,12 +124,12 @@ export namespace Transport {
             this._car_class = car_class;
         }
         
-        
+        @up
         get body_type() {
             return this._body_type;
         }
     
-        
+        @up
         get car_class() {
             return this._car_class;
         }
@@ -192,6 +202,8 @@ export namespace Transport {
         creation_date: Date;
         data: T[];
         get_data(): T[];
+        sort_by_brand() : void;
+        all_ends_with(pattern: string) : T[];
     }
     
     export class VehicleStorage<T extends Vehicle> implements IVehicleStorage<T> {
@@ -213,6 +225,21 @@ export namespace Transport {
     
         get_data(): T[] {
             return this._data;
+        }
+
+        sort_by_brand(): void {
+            this._data = this._data.sort( (model1: T, model2: T) => model1.model.toLocaleLowerCase().localeCompare(model2.model.toLocaleLowerCase()));
+        }
+
+        all_ends_with(pattern: string): T[] {
+            let result: T[] = [];
+            const data: T[] = this._data;
+            for(let i = 0; i < data.length; ++i){
+                if(data[i].model.endsWith(pattern)){
+                    result.push(this._data[i]);
+                }
+            }
+            return result;
         }
     }
 }

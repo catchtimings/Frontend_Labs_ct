@@ -94,6 +94,11 @@ export var Transport;
         Vehicle.prototype.print_info = function () {
             console.log("\n                Brand: ".concat(this._brand, "\n                Model: ").concat(this._model, "\n                Year of release: ").concat(this._year, "\n                VIN: ").concat(this._VIN, "\n                Registration number: ").concat(this._reg_number, "\n                "));
         };
+        Vehicle.prototype.car_registration = function () {
+            var FIO = this._owner_info.surname + ' ' + this._owner_info.name + ' ' + this._owner_info.patronymic;
+            var info = [this._VIN, FIO, this._reg_number];
+            return JSON.stringify(info);
+        };
         __decorate([
             up
         ], Vehicle.prototype, "brand", null);
@@ -109,6 +114,9 @@ export var Transport;
         __decorate([
             up
         ], Vehicle.prototype, "print_info", null);
+        __decorate([
+            up
+        ], Vehicle.prototype, "car_registration", null);
         Vehicle = __decorate([
             sealed
         ], Vehicle);
@@ -147,6 +155,12 @@ export var Transport;
             _super.prototype.print_info.call(this);
             console.log("\n                Body type: ".concat(this._body_type, ";\n                Car class: ").concat(this._car_class, ";\n                "));
         };
+        __decorate([
+            up
+        ], Car.prototype, "body_type", null);
+        __decorate([
+            up
+        ], Car.prototype, "car_class", null);
         return Car;
     }(Vehicle));
     Transport.Car = Car;
@@ -206,6 +220,19 @@ export var Transport;
         });
         VehicleStorage.prototype.get_data = function () {
             return this._data;
+        };
+        VehicleStorage.prototype.sort_by_brand = function () {
+            this._data = this._data.sort(function (model1, model2) { return model1.model.toLocaleLowerCase().localeCompare(model2.model.toLocaleLowerCase()); });
+        };
+        VehicleStorage.prototype.all_ends_with = function (pattern) {
+            var result = [];
+            var data = this._data;
+            for (var i = 0; i < data.length; ++i) {
+                if (data[i].model.endsWith(pattern)) {
+                    result.push(this._data[i]);
+                }
+            }
+            return result;
         };
         return VehicleStorage;
     }());
