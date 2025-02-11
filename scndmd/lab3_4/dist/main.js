@@ -13,7 +13,7 @@ var car4 = new Transport.Car("lada", "vesta", 2024, "iuhg8745hh65845", "v836ab79
 var car5 = new Transport.Car("lada", "granta", 2022, "ufbv8he85th7h75", "h254oe173ru", owner5, Body_Type.LIFTBACK, Car_Class.B);
 //let bike1: Transport.Motorbike = new Transport.Motorbike("bmw", "r 1250 rt", 2021, "7gg66fs5366afds3", "0000aa763ru", owner2, "idk", false);
 var storage = new Transport.VehicleStorage([car1, car2, car3, car4, car5]);
-storage.sort_by_brand();
+storage.sort_by_model();
 console.log(storage);
 var models = storage.all_ends_with("TA");
 console.log(models);

@@ -20,7 +20,7 @@ let car5: Transport.Car = new Transport.Car("lada", "granta", 2022, "ufbv8he85th
 
 let storage: Transport.VehicleStorage<Transport.Car> = new Transport.VehicleStorage([car1, car2, car3, car4, car5]);
 
-storage.sort_by_brand()
+storage.sort_by_model()
 console.log(storage);
 
 let models: Transport.Car[] = storage.all_ends_with("TA");

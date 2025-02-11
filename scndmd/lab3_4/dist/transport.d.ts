@@ -66,7 +66,7 @@ export declare namespace Transport {
         creation_date: Date;
         data: T[];
         get_data(): T[];
-        sort_by_brand(): void;
+        sort_by_model(): void;
         all_ends_with(pattern: string): T[];
     }
     class VehicleStorage<T extends Vehicle> implements IVehicleStorage<T> {
@@ -76,7 +76,7 @@ export declare namespace Transport {
         get creation_date(): Date;
         get data(): T[];
         get_data(): T[];
-        sort_by_brand(): void;
+        sort_by_model(): void;
         all_ends_with(pattern: string): T[];
     }
 }

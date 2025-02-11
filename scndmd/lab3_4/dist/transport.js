@@ -221,7 +221,7 @@ export var Transport;
         VehicleStorage.prototype.get_data = function () {
             return this._data;
         };
-        VehicleStorage.prototype.sort_by_brand = function () {
+        VehicleStorage.prototype.sort_by_model = function () {
             this._data = this._data.sort(function (model1, model2) { return model1.model.toLocaleLowerCase().localeCompare(model2.model.toLocaleLowerCase()); });
         };
         VehicleStorage.prototype.all_ends_with = function (pattern) {

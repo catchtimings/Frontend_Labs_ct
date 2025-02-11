@@ -202,7 +202,7 @@ export namespace Transport {
         creation_date: Date;
         data: T[];
         get_data(): T[];
-        sort_by_brand() : void;
+        sort_by_model() : void;
         all_ends_with(pattern: string) : T[];
     }
     
@@ -227,7 +227,7 @@ export namespace Transport {
             return this._data;
         }
 
-        sort_by_brand(): void {
+        sort_by_model(): void {
             this._data = this._data.sort( (model1: T, model2: T) => model1.model.toLocaleLowerCase().localeCompare(model2.model.toLocaleLowerCase()));
         }
 
