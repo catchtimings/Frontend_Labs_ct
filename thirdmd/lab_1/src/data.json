@@ -1,0 +1,60 @@
+{
+  "dishes": [
+    {
+      "name": "Паста Карбонара",
+      "ingredients": ["паста", "яйцо", "бекон", "пармезан", "черный перец"],
+      "cookingTime": 20,
+      "isVegetarian": false,
+      "nutrition": {
+        "calories": 600,
+        "protein": 25,
+        "carbohydrates": 75,
+        "fat": 20
+      },
+      "ratings": [4.5, 5.0, 4.0, 4.8],
+      "isGlutenFree": false
+    },
+    {
+      "name": "Салат Цезарь",
+      "ingredients": ["романский салат", "куриное филе", "пармезан", "гренки", "соус Цезарь"],
+      "cookingTime": 15,
+      "isVegetarian": false,
+      "nutrition": {
+        "calories": 350,
+        "protein": 30,
+        "carbohydrates": 20,
+        "fat": 15
+      },
+      "ratings": [4.0, 4.5, 4.2, 4.8],
+      "isGlutenFree": false
+    },
+    {
+      "name": "Овощной рататуй",
+      "ingredients": ["баклажан", "цуккини", "помидоры", "перец", "лук"],
+      "cookingTime": 40,
+      "isVegetarian": true,
+      "nutrition": {
+        "calories": 200,
+        "protein": 5,
+        "carbohydrates": 30,
+        "fat": 10
+      },
+      "ratings": [4.7, 4.9, 5.0, 4.8],
+      "isGlutenFree": true
+    },
+    {
+      "name": "Чизкейк",
+      "ingredients": ["творог", "сахар", "яйцо", "печенье", "сливочное масло"],
+      "cookingTime": 60,
+      "isVegetarian": true,
+      "nutrition": {
+        "calories": 450,
+        "protein": 8,
+        "carbohydrates": 50,
+        "fat": 25
+      },
+      "ratings": [4.8, 5.0, 4.9, 4.6],
+      "isGlutenFree": false
+    }
+  ]
+}
